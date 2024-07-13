@@ -1,27 +1,32 @@
-header {
-    background-color: #f8f8f8;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  header ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  header li {
-    margin: 0 1rem;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  header a:hover {
-    color: #007bff;
-  }  
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.shopping-cart {
+  margin-left: auto;
+}

@@ -13,15 +13,22 @@ const NavMenu = [
 const Navbar = () => {
   return (
     <header>
-      <div>
-        <ul>
-          {NavMenu.map((menuItem) => (
-            <li key={menuItem.name}>
-              <Link to={menuItem.link} className="">
-                {menuItem.name}
-              </Link>
-            </li>
-          ))}
+      <div className="navbar">
+        <ul className="nav-list">
+          <div className="nav-center">
+            {NavMenu.filter(item => item.name !== "ShoppingCart").map((menuItem) => (
+              <li key={menuItem.name} className="nav-item">
+                <Link to={menuItem.link} className="nav-link">
+                  {menuItem.name}
+                </Link>
+              </li>
+            ))}
+          </div>
+          <li className="nav-item shopping-cart">
+            <Link to="/Checkout/ShoppingCart" className="nav-link">
+              ShoppingCart
+            </Link>
+          </li>
         </ul>
       </div>
     </header>
