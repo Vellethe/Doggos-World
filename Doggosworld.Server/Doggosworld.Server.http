@@ -1,0 +1,6 @@
+@Doggosworld.Server_HostAddress = http://localhost:5207
+
+GET {{Doggosworld.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

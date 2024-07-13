@@ -1,0 +1,26 @@
+footer {
+    background-color: #e4002b;
+    color: white;
+    padding: 40px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer span {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .footer-brand {
+    display: flex;
+    align-items: center;
+  }  

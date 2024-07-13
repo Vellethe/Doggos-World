@@ -1,0 +1,27 @@
+header {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header li {
+    margin: 0 1rem;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  header a:hover {
+    color: #007bff;
+  }  
