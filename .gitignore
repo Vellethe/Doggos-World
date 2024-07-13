@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+# ASP.NET Core
+bin/
+obj/
+*.user
+*.lock
+*.log
+.DS_Store
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.pdb
+*/obj/
+*/bin/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Node.js / React.js
+node_modules/
+npm-debug.log
+yarn-error.log
+/.pnp/
+.pnp.js
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# Visual Studio Code
+.vscode/
