@@ -1,15 +1,13 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
-import MainContent from './MainContent';
 import Footer from '../../components/Footer';
 import '../../CSS/Styles.css';
-
-const MasterLayout = () => {
+const MasterLayout = ({ children}) => {
   return (
     <>
       <Navbar />
       <main>
-        <MainContent />
+        {children}
       </main>
       <Footer />
     </>

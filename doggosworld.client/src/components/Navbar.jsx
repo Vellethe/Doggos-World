@@ -3,6 +3,7 @@ import React from "react";
 import '../CSS/Navbar.css';
 
 const NavMenu = [
+  { name: "Homepage", link: "/Homepage"},
   { name: "Food", link: "/Order/Food" },
   { name: "Snacks", link: "/Order/Snacks" },
   { name: "Toys", link: "/Order/Toys" },
@@ -16,7 +17,7 @@ const Navbar = () => {
       <div className="navbar">
         <ul className="nav-list">
           <div className="nav-center">
-            {NavMenu.filter(item => item.name !== "ShoppingCart").map((menuItem) => (
+            {NavMenu.filter(item => item.name !== "Shopping Cart").map((menuItem) => (
               <li key={menuItem.name} className="nav-item">
                 <Link to={menuItem.link} className="nav-link">
                   {menuItem.name}
@@ -26,7 +27,7 @@ const Navbar = () => {
           </div>
           <li className="nav-item shopping-cart">
             <Link to="/Checkout/ShoppingCart" className="nav-link">
-              ShoppingCart
+              Shopping Cart
             </Link>
           </li>
         </ul>
