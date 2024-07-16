@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #f8f9fa;
+  background-color: #e4002b;
   padding: 10px;
 }
 
@@ -9,16 +9,23 @@
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 125px; 
 }
 
 .nav-item {
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.nav-link:hover {
+  font-size: 1.2em;
+  color: black;
 }
 
 .nav-center {

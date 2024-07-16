@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer>
       <section>
-        <div className="footer-brand">
-          <span>Doggos World</span>
-        </div>
-        <span>Bollbrogatan 1 | Helsingborg</span>
+        <h3>Doggos World contact information:</h3>
+        <p>Adress: Bollbrogatan 1, 252 18 Helsingborg</p>
+        <p>E-post: doggosworld@hotmail.com</p>
+        <p>Telefon: 042 - ## ## ###</p>
       </section>
     </footer>
   );
