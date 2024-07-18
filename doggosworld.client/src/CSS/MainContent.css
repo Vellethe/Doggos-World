@@ -4,7 +4,6 @@
 
 .main-content {
   padding: 10px;
-  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -43,6 +42,7 @@
 
 .content-section-details {
   margin-top: 50px;
+  width: 900px;
 }
 .content-section-details h2 {
   text-align: center;
@@ -51,6 +51,7 @@
 .content-section-hours {
   margin-top: 80px;
   text-align: center;
+  font-weight: bold;
 }
 
 .content-section h2 {

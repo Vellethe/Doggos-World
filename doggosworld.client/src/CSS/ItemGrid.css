@@ -1,17 +1,29 @@
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  width: 90%;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 15px;
   margin: 0 auto;
 }
 
 .item-card {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding-bottom: 10px;
   text-align: center;
+}
+
+.item-image {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.item-card:hover .item-image {
+  transform: scale(1.1);
+}
+
+.item-card:hover .item-name {
+  transform: translateY(15px);
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
 }
 
 h1 {
