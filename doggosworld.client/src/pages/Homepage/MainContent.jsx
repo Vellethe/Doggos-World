@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../CSS/MainContent.css';
-import rightsidebarDog from '../../assets/Images/rightsidebarDog.jpg';
-import leftsidebarDog from '../../assets/Images/leftsidebarDog.jpg';
-import rightsidebarDog2 from '../../assets/Images/rightsidebarDog2.jpg';
-import leftsidebarDog2 from '../../assets/Images/leftsidebarDog2.jpg';
-import rightsidebarDog3 from '../../assets/Images/rightsidebarDog3.jpg';
-import leftsidebarDog3 from '../../assets/Images/leftsidebarDog3.jpg';
+import rightsidebarDog from '../../assets/images/rightsidebarDog.jpg';
+import leftsidebarDog from '../../assets/images/leftsidebarDog.jpg';
+import rightsidebarDog2 from '../../assets/images/rightsidebarDog2.jpg';
+import leftsidebarDog2 from '../../assets/images/leftsidebarDog2.jpg';
+import rightsidebarDog3 from '../../assets/images/rightsidebarDog3.jpg';
+import leftsidebarDog3 from '../../assets/images/leftsidebarDog3.jpg';
 
 const MainContent = () => {
     return (
