@@ -2,7 +2,7 @@
 
 namespace Doggosworld.Server.Controllers
 {
-    public class Checkout : Controller
+    public class CheckoutController : Controller
     {
         public IActionResult Index()
         {
