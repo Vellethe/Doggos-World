@@ -11,8 +11,8 @@ const getAllFood = async () => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error("Error fetching food data:", error);
-        throw error; 
+        console.error("Error fetching food data:", error.message);
+        throw new Error("An error occurred while fetching food data. Please try again later.");
     }
 };
 

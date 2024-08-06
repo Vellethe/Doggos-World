@@ -14,6 +14,17 @@ builder.Services.AddDbContext<DoggosWorldDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DoggosWorldDbContext"));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -27,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 
