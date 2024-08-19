@@ -46,8 +46,11 @@ const Food = () => {
                     <div className="item-info">
                       <div className="item-brand">{item.brand}</div>
                       <div className="item-name">{item.name}</div>
+                      </div>
+                    <div className="item-price-and-button">
                       <div className="item-price">{item.price + "kr"}</div>
-                    </div>
+                      <button className='amount'>Click here</button>
+                      </div>
                   </div>
                 </div>
               ))}
