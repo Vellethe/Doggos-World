@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import MasterLayout from '../Homepage/MasterLayout';
 import '../../CSS/ItemGrid.css';
 import getAllFood from '../../apiCalls/Food/GetAllFood';
+import ShoppingCart from '../Checkout/ShoppingCart';
 
 const Food = () => {
   const [items, setItems] = useState([]);
+  const [cart, setCart] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,6 +23,37 @@ const Food = () => {
     };
     fetchData();
   }, []);
+
+  const addToCart = (item) => {
+    console.log("Adding to cart", item);
+    setCart(prevCart => {
+      const existingItemIndex = prevCart.findIndex(cartItem => cartItem.id === item.id);
+      if (existingItemIndex !== -1) {
+        const updatedCart = [...prevCart];
+        updatedCart[existingItemIndex].quantity += 1;
+        return updatedCart;
+      } else {
+        return [...prevCart, { ...item, quantity: 1 }];
+      }
+    });
+  };
+
+  const removeFromCart = (itemId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== itemId));
+  };
+
+  const updateQuantity = (item, newQuantity) => {
+    if (newQuantity <= 0) {
+      removeFromCart(item.id);
+    } else {
+      setCart(prevCart => {
+        const updatedCart = prevCart.map(cartItem =>
+          cartItem.id === item.id ? { ...cartItem, quantity: newQuantity } : cartItem
+        );
+        return updatedCart;
+      });
+    }
+  };
 
 
   return (
@@ -47,10 +80,15 @@ const Food = () => {
                       <div className="item-brand">{item.brand}</div>
                       <div className="item-name">{item.name}</div>
                       </div>
-                    <div className="item-price-and-button">
+                      <div className="item-price-and-button">
                       <div className="item-price">{item.price + "kr"}</div>
-                      <button className='amount'>Click here</button>
-                      </div>
+                      <button
+                        className='amount'
+                        onClick={() => addToCart(item)}
+                      >
+                        Lägg till
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -58,6 +96,12 @@ const Food = () => {
           )}
         </div>
       </div>
+
+      <ShoppingCart
+        cart={cart}
+        removeFromCart={removeFromCart}
+        updateQuantity={updateQuantity}
+      />
     </MasterLayout>
   );
 };
